@@ -1,0 +1,39 @@
+name: Radar Sentinel Globale
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codice
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          
+      - name: Installa librerie
+        run: pip install requests
+        
+      - name: Esecuzione Scansione Sentinel
+        env:
+          WAQI_TOKEN: ${{ secrets.WAQI_TOKEN }}
+        run: python sentinel.py
+        
+      - name: Sincronizzazione Database Sicurezza
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🚨 Sentinel: Aggiornamento dati globali"
+          file_pattern: "safety_feed.json"
+          push_options: '--force'
