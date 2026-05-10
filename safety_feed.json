@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": "us6000swss",
+    "category": "Salute",
+    "title": "Sisma M4.6",
+    "description": "292 km N of Saipan, Northern Mariana Islands",
+    "latitude": 17.8567,
+    "longitude": 145.6782,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swsg",
+    "category": "Salute",
+    "title": "Sisma M4.7",
+    "description": "22 km W of Kéfalos, Greece",
+    "latitude": 36.7079,
+    "longitude": 26.7078,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000sws5",
+    "category": "Salute",
+    "title": "Sisma M5",
+    "description": "74 km W of Yenangyaung, Burma (Myanmar)",
+    "latitude": 20.495,
+    "longitude": 94.1576,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swr8",
+    "category": "Salute",
+    "title": "Sisma M5.3",
+    "description": "101 km SSE of Hihifo, Tonga",
+    "latitude": -16.8014,
+    "longitude": -173.4234,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swr6",
+    "category": "Salute",
+    "title": "Sisma M5.2",
+    "description": "27 km WSW of Madang, Papua New Guinea",
+    "latitude": -5.3168,
+    "longitude": 145.5539,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swr0",
+    "category": "Salute",
+    "title": "Sisma M4.5",
+    "description": "132 km SE of Bitung, Indonesia",
+    "latitude": 0.6495,
+    "longitude": 126.0166,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swq8",
+    "category": "Salute",
+    "title": "Sisma M4.7",
+    "description": "248 km NNE of Palu, Indonesia",
+    "latitude": 1.2342,
+    "longitude": 120.5431,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swq9",
+    "category": "Salute",
+    "title": "Sisma M4.6",
+    "description": "22 km SW of Santa Bárbara, Portugal",
+    "latitude": 38.5344,
+    "longitude": -27.5038,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swni",
+    "category": "Salute",
+    "title": "Sisma M4.7",
+    "description": "7 km ENE of Cañete, Chile",
+    "latitude": -37.7665,
+    "longitude": -73.3233,
+    "countryCode": "US"
+  },
+  {
+    "id": "ci41461608",
+    "category": "Salute",
+    "title": "Sisma M4.66486919122063",
+    "description": "3 km WSW of Brawley, CA",
+    "latitude": 32.9713333333333,
+    "longitude": -115.562333333333,
+    "countryCode": "US"
+  },
+  {
+    "id": "ci41460512",
+    "category": "Salute",
+    "title": "Sisma M4.48112858848809",
+    "description": "2 km W of Brawley, CA",
+    "latitude": 32.9778333333333,
+    "longitude": -115.549833333333,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swk8",
+    "category": "Salute",
+    "title": "Sisma M5",
+    "description": "174 km SSW of Tual, Indonesia",
+    "latitude": -7.0242,
+    "longitude": 132.0136,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swk0",
+    "category": "Salute",
+    "title": "Sisma M5.5",
+    "description": "27 km ENE of Cañete, Chile",
+    "latitude": -37.7219,
+    "longitude": -73.1062,
+    "countryCode": "US"
+  },
+  {
+    "id": "us6000swjc",
+    "category": "Salute",
+    "title": "Sisma M4.6",
+    "description": "78 km SSE of Pondaguitan, Philippines",
+    "latitude": 5.6691,
+    "longitude": 126.3518,
+    "countryCode": "US"
+  }
+]
