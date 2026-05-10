@@ -7,9 +7,11 @@
     "description": "Kéfalos, Greece",
     "latitude": 36.7079,
     "longitude": 26.7078,
+    "depthKm": 158.504,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 20:29",
-    "countryCode": ""
+    "countryCode": "GR"
   },
   {
     "id": "us6000sws5",
@@ -19,6 +21,8 @@
     "description": "Yenangyaung, Burma (Myanmar)",
     "latitude": 20.495,
     "longitude": 94.1576,
+    "depthKm": 58.752,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 19:36",
     "countryCode": "MM"
@@ -31,9 +35,11 @@
     "description": "Hihifo, Tonga",
     "latitude": -16.8014,
     "longitude": -173.4234,
+    "depthKm": 10,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 16:41",
-    "countryCode": ""
+    "countryCode": "UN"
   },
   {
     "id": "us6000swr6",
@@ -43,6 +49,8 @@
     "description": "Madang, Papua New Guinea",
     "latitude": -5.3168,
     "longitude": 145.5539,
+    "depthKm": 91.215,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 16:34",
     "countryCode": "PG"
@@ -55,6 +63,8 @@
     "description": "Bitung, Indonesia",
     "latitude": 0.6495,
     "longitude": 126.0166,
+    "depthKm": 35,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 15:53",
     "countryCode": "ID"
@@ -67,6 +77,8 @@
     "description": "Palu, Indonesia",
     "latitude": 1.2342,
     "longitude": 120.5431,
+    "depthKm": 35,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 12:24",
     "countryCode": "ID"
@@ -79,6 +91,8 @@
     "description": "Santa Bárbara, Portugal",
     "latitude": 38.5344,
     "longitude": -27.5038,
+    "depthKm": 10,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 12:21",
     "countryCode": "PT"
@@ -91,6 +105,8 @@
     "description": "Cañete, Chile",
     "latitude": -37.7665,
     "longitude": -73.3233,
+    "depthKm": 30.633,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 08:03",
     "countryCode": "CL"
@@ -103,6 +119,8 @@
     "description": "Brawley, CA",
     "latitude": 32.9713333333333,
     "longitude": -115.562333333333,
+    "depthKm": 14.53,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 07:10",
     "countryCode": "US"
@@ -115,6 +133,8 @@
     "description": "Brawley, CA",
     "latitude": 32.9778333333333,
     "longitude": -115.549833333333,
+    "depthKm": 15.9,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 03:39",
     "countryCode": "US"
@@ -127,6 +147,8 @@
     "description": "Tual, Indonesia",
     "latitude": -7.0242,
     "longitude": 132.0136,
+    "depthKm": 10,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 02:42",
     "countryCode": "ID"
@@ -139,6 +161,8 @@
     "description": "Cañete, Chile",
     "latitude": -37.7219,
     "longitude": -73.1062,
+    "depthKm": 34.251,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 02:34",
     "countryCode": "CL"
@@ -151,9 +175,11 @@
     "description": "Pondaguitan, Philippines",
     "latitude": 5.6691,
     "longitude": 126.3518,
+    "depthKm": 98.708,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "10/05 01:50",
-    "countryCode": ""
+    "countryCode": "PH"
   },
   {
     "id": "us6000swi4",
@@ -163,6 +189,8 @@
     "description": "Turangi, New Zealand",
     "latitude": -38.8053,
     "longitude": 175.1941,
+    "depthKm": 225.129,
+    "tsunamiWarning": 0,
     "source": "USGS (Gov USA)",
     "timestamp": "09/05 21:52",
     "countryCode": "NZ"
