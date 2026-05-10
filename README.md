@@ -1,2 +1,0 @@
-# safety-sentinel-data
-iAlter
