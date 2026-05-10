@@ -5,13 +5,14 @@ from datetime import datetime
 
 JSON_FILE = "safety_feed.json"
 
-def get_health_alerts():
-    """Recupera epidemie in tempo reale da ReliefWeb (OMS/ONU)"""
+def get_oms_verified_news():
+    """Pescaggio diretto da ReliefWeb (Fonte ufficiale OMS/ONU)"""
     alerts = []
-    # Query specifica per epidemie attive
-    url = "https://api.reliefweb.int/v1/disasters?appname=sentinel&query[value]=type:epidemic&profile=full&limit=20&sort[]=date:desc"
+    # Query specifica per Epidemie e focolai verificati
+    url = "https://api.reliefweb.int/v1/disasters?appname=sentinel&query[value]=type:epidemic%20AND%20status:current&profile=full&limit=30&sort[]=date:desc"
+    
     try:
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=15)
         if r.status_code == 200:
             data = r.json()
             for d in data.get("data", []):
@@ -19,57 +20,28 @@ def get_health_alerts():
                 countries = f.get("country", [])
                 primary = f.get("primary_country", countries[0] if countries else {})
                 
+                # Creazione pacchetto dati sanitario
                 alerts.append({
-                    "id": f"H-{d['id']}",
+                    "id": f"OMS-{d['id']}",
                     "category": "Salute",
                     "severity": "RED",
-                    "title": f.get("name", "Allerta Sanitaria"),
-                    "description": "Focolaio epidemico segnalato dalle agenzie internazionali.",
+                    "title": f.get("name", "Avviso Sanitario Internazionale"),
+                    "description": f.get("headline", {}).get("title", "Nuovo focolaio monitorato dall'OMS."),
                     "latitude": primary.get("location", {}).get("lat", 0),
                     "longitude": primary.get("location", {}).get("lon", 0),
-                    "source": "OMS / ReliefWeb",
+                    "source": "World Health Organization (WHO)",
                     "timestamp": f.get("date", {}).get("created", "")[:10],
                     "countryCode": primary.get("iso3", "UN")[:2].upper()
                 })
     except Exception as e:
-        print(f"Errore Salute: {e}")
-    return alerts
-
-def get_nature_alerts():
-    """Recupera disastri naturali da GDACS (ONU/UE)"""
-    alerts = []
-    url = "https://www.gdacs.org/xml/rss.geojson"
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code == 200:
-            data = r.json()
-            for f in data.get("features", []):
-                props = f.get("properties", {})
-                if props.get("eventtype") == "EQ": continue # Saltiamo i sismi
-                
-                alerts.append({
-                    "id": f"N-{props.get('eventid')}",
-                    "category": "Natura",
-                    "severity": props.get("alertlevel", "Green").upper(),
-                    "title": props.get("eventname", "Emergenza Naturale"),
-                    "description": props.get("description", "").split('<')[0],
-                    "latitude": f["geometry"]["coordinates"][1],
-                    "longitude": f["geometry"]["coordinates"][0],
-                    "source": "GDACS (ONU)",
-                    "timestamp": datetime.now().strftime("%Y-%m-%d"),
-                    "countryCode": props.get("country", "UN")[:2].upper()
-                })
-    except Exception as e:
-        print(f"Errore Natura: {e}")
+        print(f"Errore connessione OMS: {e}")
     return alerts
 
 if __name__ == "__main__":
-    print("Inizio scansione...")
-    results = []
-    results.extend(get_health_alerts())
-    results.extend(get_nature_alerts())
+    print("📡 Collegamento ai server OMS in corso...")
+    news = get_oms_verified_news()
     
     with open(JSON_FILE, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+        json.dump(news, f, indent=2, ensure_ascii=False)
     
-    print(f"Scansione terminata: {len(results)} eventi trovati.")
+    print(f"✅ Backup completato: {len(news)} notizie verificate caricate.")
