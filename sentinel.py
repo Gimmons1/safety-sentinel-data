@@ -6,15 +6,27 @@ from datetime import datetime
 JSON_FILE = "safety_feed.json"
 WAQI_TOKEN = os.getenv("WAQI_TOKEN", "demo")
 
-# Nuova API velocissima e leggera per le bandiere!
-def get_country_from_coords(lat, lon):
+def get_fallback_country(text):
+    t = text.lower()
+    fallbacks = {
+        "philippines": "PH", "indonesia": "ID", "japan": "JP", "chile": "CL",
+        "mexico": "MX", "new zealand": "NZ", "russia": "RU", "taiwan": "TW",
+        "italy": "IT", "greece": "GR", "turkey": "TR", "usa": "US", "ca": "US"
+    }
+    for key, code in fallbacks.items():
+        if key in t: return code
+    return "UN"
+
+def get_country_from_coords(lat, lon, description):
     try:
-        if lat == 0 and lon == 0: return "UN"
         url = f"https://api.bigdatacloud.net/data/reverse-geocode-client?latitude={lat}&longitude={lon}&localityLanguage=it"
-        r = requests.get(url, timeout=5).json()
-        return r.get("countryCode", "UN")
+        r = requests.get(url, timeout=3).json()
+        code = r.get("countryCode", "")
+        if not code: # Se cade in mare e l'API non sa che fare
+            return get_fallback_country(description)
+        return code
     except:
-        return "UN"
+        return get_fallback_country(description)
 
 def get_usgs():
     alerts = []
@@ -22,11 +34,14 @@ def get_usgs():
     try:
         r = requests.get(url, timeout=10).json()
         for f in r.get("features", []):
-            mag = f["properties"]["mag"]
-            place = f["properties"]["place"]
+            mag = f["properties"].get("mag", 0)
+            place = f["properties"].get("place", "Sconosciuto")
             clean_place = place.split(" of ")[-1] if " of " in place else place
-            lat = f["geometry"]["coordinates"][1]
-            lon = f["geometry"]["coordinates"][0]
+            
+            coords = f["geometry"]["coordinates"]
+            lat, lon = coords[1], coords[0]
+            depth = coords[2] if len(coords) > 2 else 0 # Nuovissimo: Profondità!
+            tsunami = f["properties"].get("tsunami", 0) # Nuovissimo: Allerta Tsunami!
             
             alerts.append({
                 "id": f["id"],
@@ -36,9 +51,11 @@ def get_usgs():
                 "description": clean_place.strip(),
                 "latitude": lat,
                 "longitude": lon,
+                "depthKm": depth,
+                "tsunamiWarning": tsunami,
                 "source": "USGS (Gov USA)",
                 "timestamp": datetime.fromtimestamp(f["properties"]["time"]/1000).strftime("%d/%m %H:%M"),
-                "countryCode": get_country_from_coords(lat, lon)
+                "countryCode": get_country_from_coords(lat, lon, clean_place)
             })
     except Exception as e:
         print(f"Errore USGS: {e}")
@@ -55,9 +72,8 @@ def get_gdacs():
             if event_type == "EQ": continue 
             
             alert_level = props.get("alertlevel", "Green").upper()
-            
             tipo_ita = "Allerta Natura"
-            if event_type == "TC": tipo_ita = "Ciclone / Tempesta"
+            if event_type == "TC": tipo_ita = "Ciclone"
             elif event_type == "FL": tipo_ita = "Alluvione"
             elif event_type == "DR": tipo_ita = "Siccità"
             elif event_type == "VO": tipo_ita = "Vulcano"
@@ -72,27 +88,24 @@ def get_gdacs():
                 "severity": alert_level if alert_level in ["RED", "ORANGE"] else "GREEN",
                 "title": tipo_ita,
                 "description": f"{props.get('name', '')} - {desc}",
-                "latitude": lat,
-                "longitude": lon,
+                "latitude": lat, "longitude": lon,
+                "depthKm": 0, "tsunamiWarning": 0,
                 "source": "GDACS (ONU)",
                 "timestamp": props.get("fromdate", "")[:10],
-                "countryCode": get_country_from_coords(lat, lon)
+                "countryCode": get_country_from_coords(lat, lon, desc)
             })
     except Exception as e:
-        print(f"Errore GDACS: {e}")
+        pass
     return alerts
 
 def get_health():
     alerts = []
-    url = "https://api.reliefweb.int/v1/disasters?appname=sentinel&query[value]=epidemic&profile=full&limit=20&sort[]=date:desc"
+    url = "https://api.reliefweb.int/v1/disasters?appname=sentinel&query[value]=epidemic&profile=full&limit=15&sort[]=date:desc"
     try:
-        headers = {'Accept': 'application/json'}
-        r = requests.get(url, headers=headers, timeout=10).json()
+        r = requests.get(url, headers={'Accept': 'application/json'}, timeout=10).json()
         for d in r.get("data", []):
             f = d.get("fields", {})
             country_info = f.get("primary_country", {})
-            name = f.get("name", "Focolaio Identificato")
-            
             lat = country_info.get("location", {}).get("lat", 0)
             lon = country_info.get("location", {}).get("lon", 0)
             
@@ -101,19 +114,19 @@ def get_health():
                 "category": "Salute",
                 "severity": "RED",
                 "title": "Bollettino OMS",
-                "description": name,
-                "latitude": lat,
-                "longitude": lon,
+                "description": f.get("name", "Focolaio Virale"),
+                "latitude": lat, "longitude": lon,
+                "depthKm": 0, "tsunamiWarning": 0,
                 "source": "ReliefWeb / OMS",
                 "timestamp": f.get("date", {}).get("created", "")[:10],
-                "countryCode": get_country_from_coords(lat, lon) if lat != 0 else country_info.get("iso3", "UN")[:2].upper()
+                "countryCode": get_country_from_coords(lat, lon, f.get("name", "")) if lat != 0 else country_info.get("iso3", "UN")[:2]
             })
     except Exception as e:
-        print(f"Errore Health: {e}")
+        pass
     return alerts
 
 def get_waqi():
-    cities = ["beijing", "delhi", "milan", "los angeles", "new york", "paris", "london", "tokyo", "mexico city", "sao paulo", "bangkok", "geneva", "yverdon-les-bains"]
+    cities = ["milan", "los angeles", "new york", "paris", "london", "tokyo", "beijing", "geneva", "delhi"]
     alerts = []
     try:
         for city in cities:
@@ -121,11 +134,9 @@ def get_waqi():
             r = requests.get(url, timeout=5).json()
             if r.get("status") == "ok":
                 aqi = r.get("data", {}).get("aqi", 0)
-                
                 sev = "GREEN"
                 if aqi > 50: sev = "ORANGE"
                 if aqi > 150: sev = "RED"
-
                 lat = r["data"]["city"]["geo"][0]
                 lon = r["data"]["city"]["geo"][1]
                 
@@ -133,30 +144,22 @@ def get_waqi():
                     "id": f"WAQI-{city}",
                     "category": "Aria",
                     "severity": sev,
-                    "title": f"Indice AQI: {aqi}",
-                    "description": f"Sensore di {r['data']['city']['name']}",
-                    "latitude": lat,
-                    "longitude": lon,
+                    "title": f"AQI: {aqi}",
+                    "description": f"Sensore: {r['data']['city']['name']}",
+                    "latitude": lat, "longitude": lon,
+                    "depthKm": 0, "tsunamiWarning": 0,
                     "source": "WAQI Globale",
                     "timestamp": r["data"].get("time", {}).get("s", "")[:10],
-                    "countryCode": get_country_from_coords(lat, lon)
+                    "countryCode": get_country_from_coords(lat, lon, city)
                 })
-    except Exception as e:
-        print(f"Errore WAQI: {e}")
+    except:
+        pass
     return alerts
 
 def main():
-    print("Avvio Radar Sentinel...")
-    alerts = []
-    alerts.extend(get_usgs())
-    alerts.extend(get_gdacs())
-    alerts.extend(get_health())
-    alerts.extend(get_waqi())
-
+    alerts = get_usgs() + get_gdacs() + get_health() + get_waqi()
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(alerts, f, indent=2, ensure_ascii=False)
-    
-    print(f"✅ {len(alerts)} allerte salvate con successo.")
 
 if __name__ == "__main__":
     main()
