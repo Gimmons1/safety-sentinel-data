@@ -1,6 +1,14 @@
 name: Radar Sentinel Globale
 
 on:
+name: Radar Sentinel Globale
+
+on:
+  push:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
