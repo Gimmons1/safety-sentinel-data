@@ -15,7 +15,9 @@ jobs:
     steps:
       - name: Checkout codice
         uses: actions/checkout@v4
-        
+        with:
+          fetch-depth: 0 # Carica tutta la storia per evitare conflitti
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -32,3 +34,4 @@ jobs:
         with:
           commit_message: "🧬 OMS Update: Rilevati nuovi focolai verificati"
           file_pattern: "safety_feed.json"
+          push_options: '--force' # 🚨 FORZA L'AGGIORNAMENTO: Risolve l'errore di push
