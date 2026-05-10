@@ -1,4 +1,4 @@
-name: Radar Sentinel Globale
+name: OMS Global Sentinel
 
 on:
   push:
@@ -6,14 +6,11 @@ on:
     - cron: '*/15 * * * *'
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 permissions:
   contents: write
 
 jobs:
-  update_data:
+  update_oms_data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codice
@@ -24,17 +21,14 @@ jobs:
         with:
           python-version: '3.9'
           
-      - name: Installa librerie
+      - name: Installa dipendenze
         run: pip install requests
         
-      - name: Esecuzione Scansione Sentinel
-        env:
-          WAQI_TOKEN: ${{ secrets.WAQI_TOKEN }}
+      - name: Download Notizie Verificate OMS
         run: python sentinel.py
         
-      - name: Sincronizzazione Database Sicurezza
+      - name: Push dati su GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🚨 Sentinel: Dati sbloccati e Radar Globale attivo"
+          commit_message: "🧬 OMS Update: Rilevati nuovi focolai verificati"
           file_pattern: "safety_feed.json"
-          push_options: '--force'
