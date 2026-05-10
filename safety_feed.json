@@ -7,9 +7,9 @@
     "description": "Kéfalos, Greece",
     "latitude": 36.7079,
     "longitude": 26.7078,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 20:29",
-    "countryCode": "🌐"
+    "countryCode": "GR"
   },
   {
     "id": "us6000sws5",
@@ -19,9 +19,9 @@
     "description": "Yenangyaung, Burma (Myanmar)",
     "latitude": 20.495,
     "longitude": 94.1576,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 19:36",
-    "countryCode": "🌐"
+    "countryCode": "MM"
   },
   {
     "id": "us6000swr8",
@@ -31,7 +31,7 @@
     "description": "Hihifo, Tonga",
     "latitude": -16.8014,
     "longitude": -173.4234,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 16:41",
     "countryCode": "TO"
   },
@@ -43,7 +43,7 @@
     "description": "Madang, Papua New Guinea",
     "latitude": -5.3168,
     "longitude": 145.5539,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 16:34",
     "countryCode": "PG"
   },
@@ -55,7 +55,7 @@
     "description": "Bitung, Indonesia",
     "latitude": 0.6495,
     "longitude": 126.0166,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 15:53",
     "countryCode": "ID"
   },
@@ -67,7 +67,7 @@
     "description": "Palu, Indonesia",
     "latitude": 1.2342,
     "longitude": 120.5431,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 12:24",
     "countryCode": "ID"
   },
@@ -79,7 +79,7 @@
     "description": "Santa Bárbara, Portugal",
     "latitude": 38.5344,
     "longitude": -27.5038,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 12:21",
     "countryCode": "PT"
   },
@@ -91,9 +91,9 @@
     "description": "Cañete, Chile",
     "latitude": -37.7665,
     "longitude": -73.3233,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 08:03",
-    "countryCode": "🌐"
+    "countryCode": "CL"
   },
   {
     "id": "ci41461608",
@@ -103,9 +103,9 @@
     "description": "Brawley, CA",
     "latitude": 32.9713333333333,
     "longitude": -115.562333333333,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 07:10",
-    "countryCode": "🌐"
+    "countryCode": "US"
   },
   {
     "id": "ci41460512",
@@ -115,9 +115,9 @@
     "description": "Brawley, CA",
     "latitude": 32.9778333333333,
     "longitude": -115.549833333333,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 03:39",
-    "countryCode": "🌐"
+    "countryCode": "US"
   },
   {
     "id": "us6000swk8",
@@ -127,7 +127,7 @@
     "description": "Tual, Indonesia",
     "latitude": -7.0242,
     "longitude": 132.0136,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 02:42",
     "countryCode": "ID"
   },
@@ -139,9 +139,9 @@
     "description": "Cañete, Chile",
     "latitude": -37.7219,
     "longitude": -73.1062,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 02:34",
-    "countryCode": "🌐"
+    "countryCode": "CL"
   },
   {
     "id": "us6000swjc",
@@ -151,7 +151,7 @@
     "description": "Pondaguitan, Philippines",
     "latitude": 5.6691,
     "longitude": 126.3518,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "10/05 01:50",
     "countryCode": "PH"
   },
@@ -163,8 +163,8 @@
     "description": "Turangi, New Zealand",
     "latitude": -38.8053,
     "longitude": 175.1941,
-    "source": "USGS (Governo USA)",
+    "source": "USGS Gov",
     "timestamp": "09/05 21:52",
-    "countryCode": "🌐"
+    "countryCode": "NZ"
   }
 ]
