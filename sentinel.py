@@ -6,12 +6,12 @@ from datetime import datetime
 JSON_FILE = "safety_feed.json"
 WAQI_TOKEN = os.getenv("WAQI_TOKEN", "demo")
 
-# Nuova API velocissima e leggera per ottenere le nazioni dal GPS!
+# Nuova API velocissima e leggera per le bandiere!
 def get_country_from_coords(lat, lon):
     try:
         if lat == 0 and lon == 0: return "UN"
         url = f"https://api.bigdatacloud.net/data/reverse-geocode-client?latitude={lat}&longitude={lon}&localityLanguage=it"
-        r = requests.get(url, timeout=3).json()
+        r = requests.get(url, timeout=5).json()
         return r.get("countryCode", "UN")
     except:
         return "UN"
@@ -52,7 +52,7 @@ def get_gdacs():
         for f in r.get("features", []):
             props = f.get("properties", {})
             event_type = props.get("eventtype", "")
-            if event_type == "EQ": continue # Saltiamo i terremoti, ci pensa USGS
+            if event_type == "EQ": continue 
             
             alert_level = props.get("alertlevel", "Green").upper()
             
@@ -69,7 +69,7 @@ def get_gdacs():
             alerts.append({
                 "id": f"GDACS-{props.get('eventid', '0')}",
                 "category": "Natura",
-                "severity": alert_level if alert_level in ["RED", "ORANGE"] else "GREEN", # Mostra tutto!
+                "severity": alert_level if alert_level in ["RED", "ORANGE"] else "GREEN",
                 "title": tipo_ita,
                 "description": f"{props.get('name', '')} - {desc}",
                 "latitude": lat,
@@ -84,7 +84,6 @@ def get_gdacs():
 
 def get_health():
     alerts = []
-    # Interroghiamo ReliefWeb per le epidemie globali
     url = "https://api.reliefweb.int/v1/disasters?appname=sentinel&query[value]=epidemic&profile=full&limit=20&sort[]=date:desc"
     try:
         headers = {'Accept': 'application/json'}
@@ -123,7 +122,6 @@ def get_waqi():
             if r.get("status") == "ok":
                 aqi = r.get("data", {}).get("aqi", 0)
                 
-                # Calcolo severità aria
                 sev = "GREEN"
                 if aqi > 50: sev = "ORANGE"
                 if aqi > 150: sev = "RED"
