@@ -25,7 +25,7 @@ jobs:
           python-version: '3.9'
           
       - name: Installa librerie
-        run: pip install requests reverse_geocoder
+        run: pip install requests
         
       - name: Esecuzione Scansione Sentinel
         env:
@@ -35,6 +35,6 @@ jobs:
       - name: Sincronizzazione Database Sicurezza
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🚨 Sentinel: Aggiornamento dati globali (GPS e Salute)"
+          commit_message: "🚨 Sentinel: Dati sbloccati e Radar Globale attivo"
           file_pattern: "safety_feed.json"
           push_options: '--force'
