@@ -1,74 +1,82 @@
 import json
 import requests
+import os
 from datetime import datetime
 
 JSON_FILE = "safety_feed.json"
 
-# Mappa di salvataggio per i terremoti in mare aperto (quando il GPS fallisce)
-COUNTRY_MAP = {
-    "TONGA": "TO", "INDONESIA": "ID", "PHILIPPINES": "PH", "PAPUA NEW GUINEA": "PG", 
-    "JAPAN": "JP", "CHILE": "CL", "FIJI": "FJ", "VANUATU": "VU", "SOLOMON ISLANDS": "SB",
-    "NEW ZEALAND": "NZ", "ITALY": "IT", "CALIFORNIA": "US", "ALASKA": "US", 
-    "HAWAII": "US", "TAIWAN": "TW", "MYANMAR": "MM", "BURMA": "MM", "MEXICO": "MX",
-    "ARGENTINA": "AR", "PERU": "PE", "GREECE": "GR", "TURKEY": "TR", "RUSSIA": "RU"
-}
-
-def get_country(lat, lon, place):
-    # 1. Prova con le coordinate GPS
+def get_country_from_coords(lat, lon):
     try:
         url = f"https://api.bigdatacloud.net/data/reverse-geocode-client?latitude={lat}&longitude={lon}&localityLanguage=it"
-        r = requests.get(url, timeout=3).json()
-        code = r.get("countryCode", "")
-        if code and code != "UN": return code
-    except: pass
-    
-    # 2. Se è in mare aperto, cerca il nome della nazione nel testo
-    place_upper = place.upper()
-    for country, code in COUNTRY_MAP.items():
-        if country in place_upper:
-            return code
-            
-    return "UN" # Mappamondo se tutto fallisce
+        r = requests.get(url, timeout=5).json()
+        return r.get("countryCode", "UN")
+    except:
+        return "UN"
 
-def get_usgs():
+def get_health_alerts():
+    """Recupera i focolai e le epidemie dall'ONU/OMS"""
     alerts = []
-    url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
+    # Interroghiamo ReliefWeb specificamente per epidemie (tipo 4624)
+    url = "https://api.reliefweb.int/v1/disasters?appname=sentinel&query[value]=status:current%20AND%20type:epidemic&profile=full&limit=40&sort[]=date:desc"
+    try:
+        r = requests.get(url, timeout=10).json()
+        for d in r.get("data", []):
+            f = d.get("fields", {})
+            country = f.get("primary_country", {})
+            
+            alerts.append({
+                "id": f"HEALTH-{d['id']}",
+                "category": "Salute",
+                "severity": "RED",
+                "title": f.get("name", "Allerta Sanitaria"),
+                "description": f"Focolaio monitorato dall'OMS in {country.get('name', 'Area Globale')}",
+                "latitude": country.get("location", {}).get("lat", 0),
+                "longitude": country.get("location", {}).get("lon", 0),
+                "source": "OMS / ReliefWeb",
+                "timestamp": f.get("date", {}).get("created", "")[:10],
+                "countryCode": country.get("iso3", "UN")[:2].upper()
+            })
+    except Exception as e:
+        print(f"Errore Salute: {e}")
+    return alerts
+
+def get_natural_disasters():
+    """Cicloni, Alluvioni e Siccità dall'ONU"""
+    alerts = []
+    url = "https://www.gdacs.org/xml/rss.geojson"
     try:
         r = requests.get(url, timeout=10).json()
         for f in r.get("features", []):
-            mag = f["properties"]["mag"]
-            place = f["properties"]["place"] or "Località ignota"
-            clean_place = place.split(" of ")[-1] if " of " in place else place
+            props = f.get("properties", {})
+            if props.get("eventtype") == "EQ": continue # Ignora i sismi qui
             
-            lon = f["geometry"]["coordinates"][0]
             lat = f["geometry"]["coordinates"][1]
-            depth = f["geometry"]["coordinates"][2] # Nuovo dato: Profondità!
+            lon = f["geometry"]["coordinates"][0]
             
             alerts.append({
-                "id": f["id"],
-                "category": "Sismi",
-                "severity": "RED" if mag >= 6.0 else "ORANGE",
-                "title": f"Sisma M{mag:.1f}",
-                "description": clean_place.strip(),
+                "id": f"NAT-{props.get('eventid')}",
+                "category": "Natura",
+                "severity": props.get("alertlevel", "Green").upper(),
+                "title": props.get("eventname", "Emergenza Naturale"),
+                "description": props.get("description", ""),
                 "latitude": lat,
                 "longitude": lon,
-                "depth_km": depth, # Passiamo la profondità all'app
-                "source": "USGS (Gov USA)",
-                "timestamp": datetime.fromtimestamp(f["properties"]["time"]/1000).strftime("%d/%m %H:%M"),
-                "countryCode": get_country(lat, lon, place)
+                "source": "GDACS (ONU/UE)",
+                "timestamp": datetime.now().strftime("%Y-%m-%d"),
+                "countryCode": get_country_from_coords(lat, lon)
             })
-    except Exception as e:
-        print(f"Errore USGS: {e}")
+    except: pass
     return alerts
 
 def main():
-    print("Avvio Radar Sismico...")
-    alerts = get_usgs() # Ora scarica SOLO i terremoti
-
-    with open(JSON_FILE, "w", encoding="utf-8") as f:
-        json.dump(alerts, f, indent=2, ensure_ascii=False)
+    print("Aggiornamento Radar Sanitario...")
+    all_data = []
+    all_data.extend(get_health_alerts())
+    all_data.extend(get_natural_disasters())
     
-    print(f"✅ {len(alerts)} terremoti salvati con successo.")
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(all_data, f, indent=2, ensure_ascii=False)
+    print(f"Fatto! {len(all_data)} allerte caricate.")
 
 if __name__ == "__main__":
     main()
