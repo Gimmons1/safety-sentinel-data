@@ -3,6 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 import hashlib
 from email.utils import parsedate_to_datetime
+import re
 
 JSON_FILE = "safety_feed.json"
 
@@ -18,15 +19,19 @@ def scrape_who_details():
             root = ET.fromstring(r.content)
             for item in root.findall('.//item')[:20]:
                 title = item.find('title').text if item.find('title') is not None else ""
-                raw_desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = raw_desc.split('<')[0].replace('&nbsp;', ' ').strip()
                 
-                # Estrazione e formattazione della data e ora
+                # --- FIX: ESTRAZIONE TESTO COMPLETO ---
+                raw_desc = item.find('description').text if item.find('description') is not None else ""
+                # Rimuove tutti i tag HTML (es. <p>, <br>, <a>) mantenendo il testo intatto
+                clean_desc = re.sub(r'<[^>]+>', ' ', raw_desc)
+                clean_desc = clean_desc.replace('&nbsp;', ' ')
+                # Rimuove gli spazi doppi creati dalla pulizia
+                clean_desc = re.sub(r'\s+', ' ', clean_desc).strip()
+                
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 formatted_date = "--"
                 if pub_date:
                     try:
-                        # Converte la data RSS nel formato "12/05/2026 - 14:30"
                         dt = parsedate_to_datetime(pub_date)
                         formatted_date = dt.strftime("%d/%m/%Y - %H:%M")
                     except:
@@ -38,11 +43,11 @@ def scrape_who_details():
                     "id": f"OMS-{article_id}",
                     "category": "REPORT",
                     "title": title.upper(),
-                    "description": clean_desc,
-                    "date": formatted_date, # Nuovo campo Data
+                    "description": clean_desc, # Ora contiene l'intero articolo!
+                    "date": formatted_date,
                     "countryCode": "CH"
                 })
-            print(f"✅ Estratti {len(alerts)} articoli con data.")
+            print(f"✅ Estratti {len(alerts)} articoli completi.")
     except Exception as e:
         print(f"❌ Errore: {e}")
     return alerts
