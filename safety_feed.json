@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-bd27f8f8",
-    "category": "REPORT",
-    "title": "TUNISIA VALIDATED BY WHO AS HAVING ELIMINATED TRACHOMA AS A PUBLIC HEALTH PROBLEM",
-    "description": "Tunisia has been officially validated by the World Health Organization (WHO) as having eliminated trachoma as a public health problem, marking a significant achievement after decades of sustained effort.",
-    "date": "14/05/2026 - 09:23",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-67cc95de",
     "category": "REPORT",
     "title": "GLOBAL HEALTH GAINS FACE THREAT OF REVERSAL",
@@ -157,6 +149,14 @@
     "title": "ENCOURAGING PROGRESS IN INCLUSIVE HEALTH POLICIES FOR REFUGEES AND MIGRANTS",
     "description": "WHO reports a major shift in how countries are responding to the health needs of refugees and migrants, with new data showing more than 60 countries – two thirds of those surveyed – now include them in their national health policies and laws.",
     "date": "26/03/2026 - 08:50",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-3c981bdf",
+    "category": "REPORT",
+    "title": "WHO RECOMMENDS NEW DIAGNOSTIC TOOLS TO HELP END TB",
+    "description": "On World TB Day, the World Health Organization (WHO) is urging countries to accelerate action to end tuberculosis (TB) and expand access to lifesaving services by using new innovations such as diagnostic tests that can be used near the point-of-care and tongue swabs that can help detect the disease faster reaching more people.",
+    "date": "24/03/2026 - 08:29",
     "countryCode": "CH"
   }
 ]
