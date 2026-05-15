@@ -1,5 +1,13 @@
 [
   {
+    "id": "OMS-4ccd3e01",
+    "category": "REPORT",
+    "title": "WHO WARNS NICOTINE POUCH BRANDS TARGETING YOUTH AS SALES SURGE",
+    "description": "The World Health Organization (WHO) warns about the rapid growth and aggressive marketing of nicotine pouches, especially targeting youth, amid limited regulation worldwide. Nicotine pouches pose significant health risks and governments are urged to implement strong regulatory measures to prevent addiction and protect young people.",
+    "date": "14/05/2026 - 17:26",
+    "countryCode": "CH"
+  },
+  {
     "id": "OMS-0d78cff1",
     "category": "REPORT",
     "title": "FOLLOW-UP MESSAGE BY THE WHO DIRECTOR-GENERAL TO THE PEOPLE OF TENERIFE REGARDING THE HANTAVIRUS RESPONSE",
@@ -149,14 +157,6 @@
     "title": "WHO CALLS FOR ACTION: “TOGETHER FOR HEALTH. STAND WITH SCIENCE.” TO MARK WORLD HEALTH DAY",
     "description": "The World Health Organization (WHO) today calls on people everywhere to renew their commitment to working together and supporting science as the twin engines driving better health, under the World Health Day 2026 theme: “Together for health. Stand with science.” The campaign marks the anniversary of WHO’s founding on 7 April 1948, launching a year-long public health campaign.",
     "date": "06/04/2026 - 08:36",
-    "countryCode": "CH"
-  },
-  {
-    "id": "OMS-b72ea38d",
-    "category": "REPORT",
-    "title": "WHO MEMBER STATES AGREE TO EXTEND NEGOTIATIONS ON KEY ANNEX TO THE PANDEMIC AGREEMENT",
-    "description": "WHO Member States have agreed to extend negotiations on the Pathogen Access and Benefit Sharing (PABS) annex to the WHO Pandemic Agreement, with discussions to resume in late‑April ahead of its scheduled consideration by the World Health Assembly (WHA) in May.",
-    "date": "28/03/2026 - 19:14",
     "countryCode": "CH"
   }
 ]
