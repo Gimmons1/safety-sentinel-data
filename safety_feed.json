@@ -1,5 +1,13 @@
 [
   {
+    "id": "OMS-0d78cff1",
+    "category": "REPORT",
+    "title": "FOLLOW-UP MESSAGE BY THE WHO DIRECTOR-GENERAL TO THE PEOPLE OF TENERIFE REGARDING THE HANTAVIRUS RESPONSE",
+    "description": "A message from the Director-General of the World Health Organization expressing gratitude to the people of Tenerife for their solidarity and successful cooperation during the operation to safely disembark and care for over 120 passengers from 23 countries amid an outbreak of hantavirus.",
+    "date": "14/05/2026 - 13:27",
+    "countryCode": "CH"
+  },
+  {
     "id": "OMS-bd27f8f8",
     "category": "REPORT",
     "title": "TUNISIA VALIDATED BY WHO AS HAVING ELIMINATED TRACHOMA AS A PUBLIC HEALTH PROBLEM",
@@ -149,14 +157,6 @@
     "title": "WHO MEMBER STATES AGREE TO EXTEND NEGOTIATIONS ON KEY ANNEX TO THE PANDEMIC AGREEMENT",
     "description": "WHO Member States have agreed to extend negotiations on the Pathogen Access and Benefit Sharing (PABS) annex to the WHO Pandemic Agreement, with discussions to resume in late‑April ahead of its scheduled consideration by the World Health Assembly (WHA) in May.",
     "date": "28/03/2026 - 19:14",
-    "countryCode": "CH"
-  },
-  {
-    "id": "OMS-1b448c66",
-    "category": "REPORT",
-    "title": "ENCOURAGING PROGRESS IN INCLUSIVE HEALTH POLICIES FOR REFUGEES AND MIGRANTS",
-    "description": "WHO reports a major shift in how countries are responding to the health needs of refugees and migrants, with new data showing more than 60 countries – two thirds of those surveyed – now include them in their national health policies and laws.",
-    "date": "26/03/2026 - 08:50",
     "countryCode": "CH"
   }
 ]
