@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-6b2f36a3",
-    "category": "REPORT",
-    "title": "EPIDEMIC OF EBOLA DISEASE CAUSED BY BUNDIBUGYO VIRUS IN THE DEMOCRATIC REPUBLIC OF THE CONGO AND UGANDA DETERMINED A PUBLIC HEALTH EMERGENCY OF INTERNATIONAL CONCERN",
-    "description": "Epidemic of Ebola Disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda determined a public health emergency of international concern",
-    "date": "16/05/2026 - 23:21",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-4ccd3e01",
     "category": "REPORT",
     "title": "WHO WARNS NICOTINE POUCH BRANDS TARGETING YOUTH AS SALES SURGE",
@@ -157,6 +149,14 @@
     "title": "WHO AND FRANCE SHIFT ONE HEALTH VISION TO ACTION WITH NEW HIGH-IMPACT INITIATIVES",
     "description": "The World Health Organization (WHO) and France hosted the One Health Summit on World Health Day 2026, announcing new initiatives to protect human, animal, and environmental health through the One Health approach. The Summit highlighted urgent global challenges such as climate change, zoonotic diseases, and health inequities, aiming to prevent future health crises by fostering cross-sector collaboration and scientific guidance.",
     "date": "07/04/2026 - 19:02",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-83d618e8",
+    "category": "REPORT",
+    "title": "WHO CALLS FOR ACTION: “TOGETHER FOR HEALTH. STAND WITH SCIENCE.” TO MARK WORLD HEALTH DAY",
+    "description": "The World Health Organization (WHO) today calls on people everywhere to renew their commitment to working together and supporting science as the twin engines driving better health, under the World Health Day 2026 theme: “Together for health. Stand with science.” The campaign marks the anniversary of WHO’s founding on 7 April 1948, launching a year-long public health campaign.",
+    "date": "06/04/2026 - 08:36",
     "countryCode": "CH"
   }
 ]
