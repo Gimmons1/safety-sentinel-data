@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-71edecb2",
-    "category": "REPORT",
-    "title": "SAFE BLOOD SUPPLY IMPROVES AS VOLUNTARY DONATIONS EXCEED 85%, BUT MANY PEOPLE STILL LACK ACCESS",
-    "description": "New data from the World Health Organization (WHO) show sustained progress towards safer blood supplies globally but also highlight persistent inequalities in access to safe blood and weaknesses in governance, financing and regulation of blood systems.",
-    "date": "12/06/2026 - 12:35",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-db97f907",
     "category": "REPORT",
     "title": "AFRICA CDC AND WHO LAUNCH JOINT CONTINENTAL EBOLA RESPONSE PLAN",
@@ -157,6 +149,14 @@
     "title": "TUNISIA VALIDATED BY WHO AS HAVING ELIMINATED TRACHOMA AS A PUBLIC HEALTH PROBLEM",
     "description": "Tunisia has been officially validated by the World Health Organization (WHO) as having eliminated trachoma as a public health problem, marking a significant achievement after decades of sustained effort.",
     "date": "14/05/2026 - 09:23",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-67cc95de",
+    "category": "REPORT",
+    "title": "GLOBAL HEALTH GAINS FACE THREAT OF REVERSAL",
+    "description": "The world is falling short on health targets, with progress uneven, slowing, and in some areas reversing, according to the World Health Statistics 2026 report, published today by the World Health Organization (WHO).",
+    "date": "13/05/2026 - 13:02",
     "countryCode": "CH"
   }
 ]
