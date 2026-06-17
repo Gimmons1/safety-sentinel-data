@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-a972fcc0",
-    "category": "REPORT",
-    "title": "WHO ISSUES COMPREHENSIVE GUIDELINES ON FILOVIRUS DISEASE, INCLUDING EBOLA AND MARBURG DISEASE",
-    "description": "As the Democratic Republic of the Congo is battling an Ebola disease outbreak caused by the Bundibugyo virus, the World Health Organization (WHO) has released its first comprehensive guidelines for the clinical management of filovirus disease which include all types of Ebola and Marburg viruses. The new guidelines highlight the importance of early supportive care to improve patient survival and health outcomes, outlining 16 evidence-based recommendations.",
-    "date": "17/06/2026 - 13:30",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-f4caa92d",
     "category": "REPORT",
     "title": "OPEN LETTER TO LEADERS OF G7, G20, BRICS AND ALL NATIONS ON FINALIZING THE WHO PANDEMIC AGREEMENT’S PATHOGEN ACCESS AND BENEFIT SHARING ANNEX",
@@ -157,6 +149,14 @@
     "title": "WHO WARNS NICOTINE POUCH BRANDS TARGETING YOUTH AS SALES SURGE",
     "description": "The World Health Organization (WHO) warns about the rapid growth and aggressive marketing of nicotine pouches, especially targeting youth, amid limited regulation worldwide. Nicotine pouches pose significant health risks and governments are urged to implement strong regulatory measures to prevent addiction and protect young people.",
     "date": "14/05/2026 - 17:26",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-0d78cff1",
+    "category": "REPORT",
+    "title": "FOLLOW-UP MESSAGE BY THE WHO DIRECTOR-GENERAL TO THE PEOPLE OF TENERIFE REGARDING THE HANTAVIRUS RESPONSE",
+    "description": "A message from the Director-General of the World Health Organization expressing gratitude to the people of Tenerife for their solidarity and successful cooperation during the operation to safely disembark and care for over 120 passengers from 23 countries amid an outbreak of hantavirus.",
+    "date": "14/05/2026 - 13:27",
     "countryCode": "CH"
   }
 ]
