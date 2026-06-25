@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-96673993",
-    "category": "REPORT",
-    "title": "655 MILLION PEOPLE STILL LIVING WITHOUT ELECTRICITY UNDERSCORE URGENT NEED TO DELIVER ON UNIVERSAL ENERGY ACCESS TARGET",
-    "description": "At a time when energy security and affordability have risen to the top of the development agenda, 655 million people globally still lack access to electricity, and two billion use polluting fuels and technologies for cooking putting their health and well-being at risk.",
-    "date": "24/06/2026 - 11:57",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-4b0ffc6c",
     "category": "REPORT",
     "title": "WHO URGES SCALE UP OF NEWBORN SCREENING TO IMPROVE EARLY DETECTION AND CARE OF BIRTH DEFECTS",
@@ -157,6 +149,14 @@
     "title": "DIRECTOR-GENERAL PRESENTS AWARD FOR GLOBAL HEALTH TO FOUR DISTINGUISHED LEADERS",
     "description": "At the Seventy-ninth World Health Assembly in Geneva, WHO Director-General Dr Tedros Adhanom Ghebreyesus has presented four distinguished leaders with the Award for Global Health, recognizing their lifetime achievements and exceptional contributions to improving the health and well-being of communities worldwide. This year&rsquo;s laureates are Dr Tore Godal, Dr Merceline Dahl-Regis, Dr Mike Ryan and Dr Heba El Sewedy. They were celebrated during the High-Level Welcome of the World Health Assembly (WHA), held this year under the theme &ldquo;Reshaping global health: a shared responsibility.&rdquo; Established in 2019, the Director-General&rsquo;s Awards for Global Health recognize individuals whose leadership and commitment have delivered tangible improvements in health outcomes around the world. &ldquo;I am honoured to present the Global Health Leaders Awards to four individuals who have made outstanding lifetime contributions to global health,&rdquo; said Dr Tedros. Dr Tore Godal was recognized for his transformative leadership in immunization and infectious diseases. Throughout his distinguished career, he played a pivotal role in elevating vaccines as a global development priority and helped establish major initiatives including Gavi, the Vaccine Alliance, Roll Back Malaria and CEPI, the Coalition for Epidemic Preparedness Innovations. He also played a pivotal role in the fight against neglected diseases when leading WHO&rsquo;s Tropical Diseases Programme, and expanding work on leprosy and malaria. He helped expand community-based ivermectin distribution and onchocerciasis control efforts, which contributed to protecting large populations from river blindness. Dr Godal&rsquo;s work has translated scientific research into large-scale public health action, protecting millions of lives. Dr Merceline Dahl-Regis was recognized for her lifelong commitment in expanding immunization and disease elimination in the Region of the Americas and beyond. Her contributions were instrumental in achieving the elimination of measles and rubella in the Americas &ndash; the first region in the world to reach this milestone. Her advocacy and support of the regional Dual Elimination Initiative also supported the elimination of mother-to-child transmission of syphilis and HIV in the Americas. Through research, community engagement and regional collaboration, she has advanced a holistic approach to health and development and had a profound impact on the lives of many people in the Americas and globally. Dr Mike Ryan was honoured for his leadership in strengthening global preparedness for and response to health emergencies. A founder of the Global Outbreak Alert and Response Network (GOARN), he has shaped international systems for detecting and responding to epidemics, and &ndash; when serving as the Executive Director of WHO&rsquo;s Health Emergencies Programme &ndash; led operational responses to SARS, cholera, Ebola, polio and COVID-19. His leadership during major outbreaks and humanitarian crises working in some of the most challenging environments has demonstrated an unwavering commitment to protecting vulnerable communities and advancing global health security. Dr Heba Elsewedy received the award for her dedication to humanitarian action and social justice. Through the Ahl Masr Foundation, which she founded in 2013, she has pioneered comprehensive approaches to the prevention and treatment of trauma and burn injuries, while promoting awareness, dignity and the reintegration of survivors. Dr Heba Elsewedy's foundation has been instrumental in providing medical and psychological support to burn victims, as well as humanitarian aid to those affected by the Gaza conflict. Her work has transformed lives and stands as a model of compassionate, people-centred care, and a source of inspiration for many young public health advocates. From steering large-public health actions, to leading scientific innovations, engaging with communities and protecting people against emergencies and infectious diseases, the 2026 awardees reflect the diversity of approaches needed to achieve the highest possible level of health for all. Their achievements serve as a source of inspiration for current and future generations working for a healthier, safer and more equitable world for all.",
     "date": "18/05/2026 - 13:30",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-6b2f36a3",
+    "category": "REPORT",
+    "title": "EPIDEMIC OF EBOLA DISEASE CAUSED BY BUNDIBUGYO VIRUS IN THE DEMOCRATIC REPUBLIC OF THE CONGO AND UGANDA DETERMINED A PUBLIC HEALTH EMERGENCY OF INTERNATIONAL CONCERN",
+    "description": "Epidemic of Ebola Disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda determined a public health emergency of international concern",
+    "date": "16/05/2026 - 23:21",
     "countryCode": "CH"
   }
 ]
