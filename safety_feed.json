@@ -1,5 +1,13 @@
 [
   {
+    "id": "OMS-025f0bcf",
+    "category": "REPORT",
+    "title": "EL SALVADOR VALIDATED BY WHO AS HAVING ELIMINATED TRACHOMA AS A PUBLIC HEALTH PROBLEM",
+    "description": "The World Health Organization (WHO) has validated El Salvador as having eliminated trachoma as a public health problem. Trachoma is the world's leading infectious cause of blindness.",
+    "date": "13/07/2026 - 09:57",
+    "countryCode": "CH"
+  },
+  {
     "id": "OMS-828f27b2",
     "category": "REPORT",
     "title": "WHO CALLS FOR URGENT ACTION AS NEW CANCER CASES ARE PROJECTED TO NEARLY DOUBLE BY 2050",
@@ -149,14 +157,6 @@
     "title": "SEVENTY-NINTH WORLD HEALTH ASSEMBLY – DAILY UPDATE: 20 MAY 2026",
     "description": "Summary of discussions of 20 May at the Seventy-ninth World Health Assembly.",
     "date": "21/05/2026 - 19:48",
-    "countryCode": "CH"
-  },
-  {
-    "id": "OMS-8b42598e",
-    "category": "REPORT",
-    "title": "SEVENTY-NINTH WORLD HEALTH ASSEMBLY – DAILY UPDATE: 19 MAY 2026",
-    "description": "Summary of discussions of 19 May at Seventy-ninth World Health Assembly",
-    "date": "20/05/2026 - 15:01",
     "countryCode": "CH"
   }
 ]
