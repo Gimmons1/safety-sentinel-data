@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-d4a4718e",
-    "category": "REPORT",
-    "title": "WHO MEMBER STATES CONTINUE NEGOTIATIONS ON THE PATHOGEN ACCESS AND BENEFIT SHARING ANNEX",
-    "description": "WHO Member States have advanced negotiations on the Pathogen Access and Benefit Sharing (PABS) annex, a central component of the WHO Pandemic Agreement, while agreeing that continued discussions are needed to finalize a framework that supports a faster, more effective and equitable response to future pandemics.",
-    "date": "18/07/2026 - 07:27",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-31d07853",
     "category": "REPORT",
     "title": "NEW WHO GUIDELINES: UP TO 45% OF DEMENTIA RISK COULD BE PREVENTED OR DELAYED",
@@ -157,6 +149,14 @@
     "title": "SEVENTY-NINTH WORLD HEALTH ASSEMBLY – DAILY UPDATE: 22 MAY 2026",
     "description": "Summary of discussions of 22 May at the Seventy-ninth World Health Assembly.",
     "date": "22/05/2026 - 19:24",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-3d87f76e",
+    "category": "REPORT",
+    "title": "FIRST MEETING OF THE IHR EMERGENCY COMMITTEE REGARDING THE EPIDEMIC OF EBOLA BUNDIBUGYO VIRUS DISEASE IN THE DEMOCRATIC REPUBLIC OF THE CONGO AND UGANDA 2026 – TEMPORARY RECOMMENDATIONS",
+    "description": "The Committee’s advice aligned with the determination by the WHO Director-General that the event constitutes a public health emergency of international concern (PHEIC), but does not meet the criteria for pandemic emergency. The DG, considering the advice of the Committee, he is hereby issuing the following temporary recommendations to all States Parties.",
+    "date": "22/05/2026 - 15:22",
     "countryCode": "CH"
   }
 ]
