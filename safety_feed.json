@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-28cc097d",
-    "category": "REPORT",
-    "title": "WHO LAUNCHES SEVEN STRATEGIES TO PREVENT DROWNING",
-    "description": "Ahead of World Drowning Prevention Day on 25 July, the World Health Organization (WHO) is launching a new technical package to help governments and communities implement seven proven measures to reduce drowning deaths.",
-    "date": "23/07/2026 - 08:00",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-e3c60408",
     "category": "REPORT",
     "title": "UN REPORT: GLOBAL HUNGER LEVELS EASE FOR THIRD CONSECUTIVE YEAR AS REGIONAL DISPARITIES PERSIST",
@@ -157,6 +149,14 @@
     "title": "WHO URGES GOVERNMENTS TO PROTECT YOUNG PEOPLE FROM ADDICTION TO TOBACCO AND NICOTINE PRODUCTS",
     "description": "Worldwide, at least 40 million children aged 13–15 use tobacco products, and young people’s use of e-cigarettes and nicotine pouches continues to rise. In advance of World No Tobacco Day – 31 May – the World Health Organization (WHO) urges governments around the world to protect a new generation from becoming addicted to tobacco and nicotine products.",
     "date": "29/05/2026 - 08:48",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-35ec3e0f",
+    "category": "REPORT",
+    "title": "EXPERTS CONVENED BY WHO ADVISE ON CANDIDATE TREATMENTS AND VACCINES FOR EBOLA DISEASE CAUSED BY BUNDIBUGYO VIRUS",
+    "description": "In response to the current outbreak of Ebola disease caused by Bundibugyo virus occurring in the Democratic Republic of the Congo, with cases also reported in Uganda, WHO convened several of its expert and advisory groups. These groups assessed potential vaccines and therapeutics for both prevention and treatment of Bundibugyo virus disease (BVD).",
+    "date": "28/05/2026 - 19:10",
     "countryCode": "CH"
   }
 ]
