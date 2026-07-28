@@ -1,13 +1,5 @@
 [
   {
-    "id": "OMS-0be890f4",
-    "category": "REPORT",
-    "title": "WHO: INTEGRATION, INNOVATION AND COMMUNITY LEADERSHIP KEY TO ENDING HIV, HEPATITIS AND STIS",
-    "description": "The World Health Organization (WHO) today launched a new report assessing progress in implementing the Global Health Sector Strategies (GHSS) on HIV, viral hepatitis and sexually transmitted infections (STIs) for 2022–2030. Released during the 26th International AIDS Conference (AIDS 2026) and ahead of World Hepatitis Day (28 July), the report highlights significant achievements and persistent challenges in the global response to these epidemics.",
-    "date": "27/07/2026 - 15:45",
-    "countryCode": "CH"
-  },
-  {
     "id": "OMS-28cc097d",
     "category": "REPORT",
     "title": "WHO LAUNCHES SEVEN STRATEGIES TO PREVENT DROWNING",
@@ -157,6 +149,14 @@
     "title": "JOINT STATEMENT BY THE GOVERNMENT OF THE DEMOCRATIC REPUBLIC OF THE CONGO AND WHO CONCERNING THE OUTBREAK OF EBOLA DISEASE CAUSED BY THE BUNDIBUGYO VIRUS",
     "description": "The Government of the Democratic Republic of the Congo (DRC) and the World Health Organization (WHO) reaffirm their strong partnership and shared commitment to protect the health and well-being of the people of Ituri Province and the nation at large, following the joint mission to Bunia led by Dr Samuel Roger Kamba, Minister of Health, Mr. Patrick Muyaya Katembwe, Minister of Communication and Medias, and the visit of WHO Director-General Dr Tedros Adhanom Ghebreyesus. This high-level visit comes at a challenging time, as the country responds to an outbreak of Ebola disease caused by the Bundibugyo virus. The Ministry of Health reports a rapidly evolving situation, with cases and deaths notified in several health zones of Ituri, North Kivu and South Kivu. The Government, with support from WHO and partners, is intensifying surveillance, laboratory testing and patient care to interrupt transmission as quickly as possible The Government of the DRC is firmly leading a comprehensive national response, working closely with provincial authorities in Ituri and neighbouring provinces. WHO, alongside the broader United Nations system and health and humanitarian partners, is fully committed to supporting these efforts. Together, DRC authorities, WHO and partners are working to strengthen coordination, mobilize additional resources, and ensure that life-saving interventions reach affected communities quickly and equitably Central to this response is the recognition that communities are at the heart of the solution. Success will depend on the trust, engagement and leadership of local communities. National and provincial authorities, with support from WHO and partners, are intensifying dialogue with community leaders, women's groups, youth representatives, religious leaders and the private sector to better understand local concerns and co-develop solutions that are culturally appropriate and effective. While the Bundibugyo strain presents additional challenges, including the absence of a licensed vaccine or specific treatment, proven public health measures remain effective in slowing transmission and potential full recovery. The Ministry of Health, WHO and partners are working to rapidly undertake randomized control trials on candidate vaccines and treatments. Persistent challenges include early detection and isolation of cases, contact tracing, safe and dignified burials, robust infection prevention and control in health facilities, and strong community awareness. The Government and WHO call on all communities to continue adopting protective behaviours, including regular hand hygiene, early care seeking in health facilities, and sharing accurate information. The DRC brings unparalleled experience to this response, having successfully contained multiple previous Ebola outbreaks. This experience, combined with strong political leadership at the highest level of the State and renewed international solidarity, provides a firm foundation for bringing the current outbreak under control. Both parties emphasize that outbreak response must maintain primary health care and essential services and strengthen long-term health system resilience. Investments made today in laboratories, health workers, surveillance systems and essential services will leave a legacy for the people of Ituri and the DRC as a whole. We sincerely thank our international partners for the support already provided to response operations, and we encourage sustained solidarity to bring this outbreak under control. Cooperation between countries must also ensure that borders remain open, and that entry controls do not obstruct the flow of desperately needed medical supplies and personnel. Together, DRC authorities, WHO, Africa CDC and partners are working to strengthen coordination, mobilize additional resources, and ensure that life-saving interventions reach affected communities quickly and equitably.",
     "date": "31/05/2026 - 21:49",
+    "countryCode": "CH"
+  },
+  {
+    "id": "OMS-437b2dd4",
+    "category": "REPORT",
+    "title": "WHO URGES GOVERNMENTS TO PROTECT YOUNG PEOPLE FROM ADDICTION TO TOBACCO AND NICOTINE PRODUCTS",
+    "description": "Worldwide, at least 40 million children aged 13–15 use tobacco products, and young people’s use of e-cigarettes and nicotine pouches continues to rise. In advance of World No Tobacco Day – 31 May – the World Health Organization (WHO) urges governments around the world to protect a new generation from becoming addicted to tobacco and nicotine products.",
+    "date": "29/05/2026 - 08:48",
     "countryCode": "CH"
   }
 ]
